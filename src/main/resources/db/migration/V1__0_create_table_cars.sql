@@ -1,6 +1,5 @@
 CREATE TABLE cars (
     id int NOT NULL AUTO_INCREMENT,
-    valor decimal(19,2) NOT NULL,
     fipe_value decimal(19,2) NOT NULL,
     model varchar(100) DEFAULT NULL,
     manufacturer varchar(19) DEFAULT NULL,
