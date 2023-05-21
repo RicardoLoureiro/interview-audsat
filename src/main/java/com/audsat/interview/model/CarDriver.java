@@ -22,7 +22,7 @@ public class CarDriver {
     Driver driver;
 
     @ManyToOne
-    @JoinColumn(name = "driver_id")
+    @JoinColumn(name = "car_id")
     Car car;
 
     private boolean is_main_driver;

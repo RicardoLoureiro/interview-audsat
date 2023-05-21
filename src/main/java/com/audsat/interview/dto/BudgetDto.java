@@ -14,10 +14,12 @@ public class BudgetDto {
     private String document;
     private String birthdate;
 
+    private String value_budget;
+
     private String car_model;
     private int car_year;
 
     private String validate_time;
-    private boolean driver_issue;
-    private boolean car_issue;
+    private boolean driver_sinister;
+    private boolean car_sinister;
 }
