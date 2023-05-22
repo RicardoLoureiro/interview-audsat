@@ -1,0 +1,2 @@
+INSERT INTO drivers(`name`, `document`, `birthdate`) VALUES('Fulano da Silva', 'xxxxxxxxx', '1990-05-19');
+INSERT INTO drivers(`name`, `document`, `birthdate`) VALUES('Silcrano Junior', 'xxxxxxxxxy', '2000-05-19');

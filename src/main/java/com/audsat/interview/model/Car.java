@@ -10,6 +10,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "cars")
 @Getter
@@ -31,9 +33,12 @@ public class Car {
 
     @NotNull
     @Positive
-    private int model_year;
+    private int year;
 
     @NotNull
     @Positive
     private float fipe_value;
+
+    @OneToMany(mappedBy="car")
+    private Set<CarDriver> carDrivers;
 }

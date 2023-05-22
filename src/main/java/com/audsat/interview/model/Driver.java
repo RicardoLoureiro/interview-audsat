@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "drivers")
@@ -23,9 +23,16 @@ public class Driver {
     private Long id;
 
     @NotBlank
+    @Size(max=100)
+    private String name;
+
+    @NotBlank
     @Size(max=25)
     private String document;
 
     @NotNull
-    private Date birthdate;
+    private String birthdate;
+
+    @OneToMany(mappedBy="driver")
+    private Set<CarDriver> carDrivers;
 }

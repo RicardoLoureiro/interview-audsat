@@ -1,10 +1,13 @@
 package com.audsat.interview.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.sql.Date;
 
 @Entity
 @Table(name = "car_drivers")
@@ -17,14 +20,17 @@ public class CarDriver {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private boolean is_main_driver;
+    private Date claim_event_date;
+
     @ManyToOne
     @JoinColumn(name = "driver_id")
+    @NotNull
     Driver driver;
 
     @ManyToOne
     @JoinColumn(name = "car_id")
+    @NotNull
     Car car;
-
-    private boolean is_main_driver;
 }
 

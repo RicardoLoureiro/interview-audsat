@@ -28,15 +28,9 @@ public class Budget {
     @NotBlank
     private String expiration;
 
-    @NotNull
-    private boolean car_sinister = false;
-
-    @NotNull
-    private boolean driver_sinister = false;
-
     @ManyToOne
     @NotNull
-    private Costumer costumer;
+    private Driver driver;
 
     @ManyToOne
     @NotNull

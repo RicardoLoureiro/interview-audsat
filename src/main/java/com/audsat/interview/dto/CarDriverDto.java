@@ -7,15 +7,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BudgetDto {
+public class CarDriverDto {
     private Long id;
-
     private Driver driver;
-
     private Car car;
-
-    private float value_budget;
-    private String expiration;
-    private boolean driver_sinister;
-    private boolean car_sinister;
+    private boolean is_main_driver;
 }

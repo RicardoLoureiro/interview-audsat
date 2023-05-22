@@ -24,19 +24,19 @@ public class BudgetController {
     private BudgetService service;
 
     @GetMapping
-    public Page<BudgetDto> listar(@PageableDefault(size=10) Pageable paginacao) {
+    public Page<BudgetDto> listAll(@PageableDefault(size=10) Pageable paginacao) {
         return service.get(paginacao);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BudgetDto> detalhar(@PathVariable @NotNull Long id) {
+    public ResponseEntity<BudgetDto> detailed(@PathVariable @NotNull Long id) {
         BudgetDto dto = service.getById(id);
 
         return ResponseEntity.ok(dto);
     }
 
     @PostMapping
-    public ResponseEntity<BudgetDto> cadastrar(@RequestBody @Valid BudgetFormDto dto, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<BudgetDto> create(@RequestBody @Valid BudgetFormDto dto, UriComponentsBuilder uriBuilder) {
         BudgetDto budget = service.createBudget(dto);
         URI newBudget = uriBuilder.path("/insurance/budgets/{id}").buildAndExpand(budget.getId()).toUri();
 
@@ -44,13 +44,13 @@ public class BudgetController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<BudgetDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid BudgetFormDto dto) {
-        BudgetDto atualizado = service.updateBudget(id, dto);
-        return ResponseEntity.ok(atualizado);
+    public ResponseEntity<BudgetDto> update(@PathVariable @NotNull Long id, @RequestBody @Valid BudgetFormDto dto) {
+        BudgetDto updated = service.updateBudget(id, dto);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<BudgetDto> remover(@PathVariable @NotNull Long id) {
+    public ResponseEntity<BudgetDto> delete(@PathVariable @NotNull Long id) {
         service.deleteBudget(id);
         return ResponseEntity.noContent().build();
     }
