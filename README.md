@@ -19,7 +19,7 @@
 ``` 
 mvn package
 ```
-* Edit Dockerfile to set the oficial image of the version that is compiled.
+* Edit Dockerfile to set the official image of the version that is compiled.
 * Set the correct name of JAR file generated.
 * Run docker command:
 ```
