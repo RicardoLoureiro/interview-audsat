@@ -10,15 +10,9 @@ import java.util.Set;
 @Getter
 @Setter
 public class BudgetFormDto {
-    private Long id;
+    private Long costumer_id;
+    private Long car_id;
 
-    private String costumer_name;
-    private String driver_document;
-
-    private String car_model;
-    private String car_year;
-
-    private float value_budget;
     private String validate_time;
     private boolean driver_sinister;
     private boolean car_sinister;

@@ -35,8 +35,10 @@ public class Budget {
     private boolean driver_sinister = false;
 
     @ManyToOne
+    @NotNull
     private Costumer costumer;
 
     @ManyToOne
+    @NotNull
     private Car car;
 }

@@ -44,12 +44,12 @@ public class BudgetController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<BudgetDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid BudgetDto dto) {
+    public ResponseEntity<BudgetDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid BudgetFormDto dto) {
         BudgetDto atualizado = service.updateBudget(id, dto);
         return ResponseEntity.ok(atualizado);
     }
 
-    @DeleteMapping("/({id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<BudgetDto> remover(@PathVariable @NotNull Long id) {
         service.deleteBudget(id);
         return ResponseEntity.noContent().build();
