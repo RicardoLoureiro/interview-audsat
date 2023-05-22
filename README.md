@@ -17,7 +17,7 @@
 ### Using Docker
 * Compile the project using Maven command:
 ``` 
-mvn pakcage
+mvn package
 ```
 * Edit Dockerfile to set the oficial image of the version that is compiled.
 * Set the correct name of JAR file generated.
