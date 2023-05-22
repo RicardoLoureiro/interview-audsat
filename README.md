@@ -46,6 +46,7 @@ For further reference, please consider the following sections:
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.1.0/reference/htmlsingle/#using.devtools)
 * [OpenApi 3.0](https://spec.openapis.org/oas/v3.1.0) 
 * [H2 Database Engine](https://www.h2database.com/html/main.html)
+* [Docker](https://docs.docker.com/)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
