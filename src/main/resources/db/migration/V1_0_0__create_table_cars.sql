@@ -3,6 +3,6 @@ CREATE TABLE cars (
     `model` varchar(100) DEFAULT NOT NULL,
     `manufacturer` varchar(19) DEFAULT NOT NULL,
     `fipe_value` decimal(19,2) NOT NULL,
-    `year` varchar(7) DEFAULT NULL,
+    `model_year` varchar(7) DEFAULT NULL,
     PRIMARY KEY (id)
 );

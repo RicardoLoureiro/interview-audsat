@@ -5,7 +5,7 @@ CREATE TABLE budgets (
     `car_sinister` boolean DEFAULT false NOT NULL,
     `driver_sinister` boolean DEFAULT false NOT NULL,
     `value_budget` decimal (10,2) NOT NULL,
-    `validate_time` DATE NOT NULL,
+    `validate_time` varchar(10) NOT NULL,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY (id),
