@@ -7,17 +7,33 @@
 ### About
 * Used IntelliJ IDE.
 * Seeds are provide to make easy tests (see bellow).
-* 
+
 ### Runing on IDE
 * Pull the code on a folder of your preference.
 * Open in your favorite IDE.
 * Go to src/main/java/ com.audsat.interview
 * Run InterviewApplication.java
 
-### 
+### Using Docker
+* Compile the project using Maven command:
+``` 
+mvn pakcage
+```
+* Edit Dockerfile to set the oficial image of the version that is compiled.
+* Set the correct name of JAR file generated.
+* Run docker command:
+```
+docker build -t <image-name>:<image_version> .
+```
+* Finally, start our container:
+```
+docker run -p 8080:8080 <image-name>:<image_version> 
+```
 ___
 
 ### Reference Documentation
+About project consideration and documentations, see doc folder on project.
+
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
@@ -28,6 +44,8 @@ For further reference, please consider the following sections:
 * [Validation](https://docs.spring.io/spring-boot/docs/3.1.0/reference/htmlsingle/#io.validation)
 * [Flyway Migration](https://docs.spring.io/spring-boot/docs/3.1.0/reference/htmlsingle/#howto.data-initialization.migration-tool.flyway)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.1.0/reference/htmlsingle/#using.devtools)
+* [OpenApi 3.0](https://spec.openapis.org/oas/v3.1.0) 
+* [H2 Database Engine](https://www.h2database.com/html/main.html)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
