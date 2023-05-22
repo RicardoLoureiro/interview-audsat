@@ -1,7 +1,5 @@
 package com.audsat.interview.dto;
 
-import com.audsat.interview.model.Car;
-import com.audsat.interview.model.Costumer;
 import lombok.Getter;
 import lombok.Setter;
 
