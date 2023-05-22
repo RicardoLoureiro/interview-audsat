@@ -11,7 +11,7 @@ public class BudgetFormDto {
     private Long costumer_id;
     private Long car_id;
 
-    private String validate_time;
+    private String expiration;
     private boolean driver_sinister;
     private boolean car_sinister;
 }

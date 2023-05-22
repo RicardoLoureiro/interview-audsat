@@ -15,7 +15,7 @@ public class BudgetDto {
     private Car car;
 
     private float value_budget;
-    private String validate_time;
+    private String expiration;
     private boolean driver_sinister;
     private boolean car_sinister;
 }

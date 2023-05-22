@@ -1,4 +1,21 @@
 # Getting Started
+### Prerequisite
+* JAVA JDE 8+
+* JAVA JDK
+* Docker(optional)
+
+### About
+* Used IntelliJ IDE.
+* Seeds are provide to make easy tests (see bellow).
+* 
+### Runing on IDE
+* Pull the code on a folder of your preference.
+* Open in your favorite IDE.
+* Go to src/main/java/ com.audsat.interview
+* Run InterviewApplication.java
+
+### 
+___
 
 ### Reference Documentation
 For further reference, please consider the following sections:

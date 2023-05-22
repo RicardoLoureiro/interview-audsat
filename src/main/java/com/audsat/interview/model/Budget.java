@@ -26,7 +26,7 @@ public class Budget {
     private float value_budget;
 
     @NotBlank
-    private String validate_time;
+    private String expiration;
 
     @NotNull
     private boolean car_sinister = false;
