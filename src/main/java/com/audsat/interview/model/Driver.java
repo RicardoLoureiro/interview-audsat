@@ -2,11 +2,14 @@ package com.audsat.interview.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.sql.Date;
 
 @Entity
 @Table(name = "drivers")
@@ -23,7 +26,6 @@ public class Driver {
     @Size(max=25)
     private String document;
 
-    @NotBlank
-    @Size(max=20)
-    private String birthdate;
+    @NotNull
+    private Date birthdate;
 }
