@@ -5,16 +5,18 @@ import com.audsat.interview.model.Costumer;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.util.Set;
 
 @Getter
 @Setter
-public class BudgetDto {
+public class BudgetFormDto {
     private Long id;
 
-    private Costumer costumer;
+    private String costumer_name;
+    private String driver_document;
 
-    private Car car;
+    private String car_model;
+    private String car_year;
 
     private float value_budget;
     private String validate_time;

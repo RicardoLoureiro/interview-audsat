@@ -4,13 +4,11 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "budgets")
@@ -27,8 +25,8 @@ public class Budget {
     @Positive
     private float value_budget;
 
-    @NotNull
-    private boolean validate_time = false;
+    @NotBlank
+    private String validate_time;
 
     @NotNull
     private boolean car_sinister = false;
@@ -36,9 +34,9 @@ public class Budget {
     @NotNull
     private boolean driver_sinister = false;
 
-    @NotNull
-    private Long costumerId;
+    @ManyToOne
+    private Costumer costumer;
 
-    @NotNull
-    private Long carId;
+    @ManyToOne
+    private Car car;
 }
