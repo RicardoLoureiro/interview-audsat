@@ -1,0 +1,122 @@
+openapi: 3.0.0
+info:
+  title: Budget Service API
+  version: 1.0.0
+paths:
+  /insurance/budgets:
+    get:
+      summary: Get all budgets
+      operationId: getAllBudgets
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BudgetDto'
+    post:
+      summary: Create a new budget
+      operationId: createBudget
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BudgetFormDto'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BudgetDto'
+  /insurance/budgets/{id}:
+    get:
+      summary: Get a budget by ID
+      operationId: getBudgetById
+      parameters:
+        - name: id
+          in: path
+          description: Budget ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BudgetDto'
+    put:
+      summary: Update a budget by ID
+      operationId: updateBudget
+      parameters:
+        - name: id
+          in: path
+          description: Budget ID
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BudgetFormDto'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BudgetDto'
+    delete:
+      summary: Delete a budget by ID
+      operationId: deleteBudget
+      parameters:
+        - name: id
+          in: path
+          description: Budget ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Successful operation
+components:
+  schemas:
+    BudgetDto:
+      type: object
+      properties:
+        id:
+          type: integer
+        value_budget:
+          type: number
+        validate_time:
+          type: string
+        car_sinister:
+          type: boolean
+        driver_sinister:
+          type: boolean
+        costumer:
+          $ref: '#/components/schemas/CostumerDto'
+        car:
+          $ref: '#/components/schemas/CarDto'
+    BudgetFormDto:
+      type: object
+      properties:
+        costumer_id:
+          type: integer
+        car_id:
+          type: integer
+        value_budget:
+          type: number
+        validate_time:
+          type: string
+        car_sinister:
+          type: boolean
+        driver_sinister:
+          type: boolean
